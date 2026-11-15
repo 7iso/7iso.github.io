@@ -73,7 +73,7 @@
 
     <div class="wrap stats">
       <div class="stat"><span class="num" data-count="3" data-suffix="+">0</span><span class="lbl">ans en ML / IA</span></div>
-      <div class="stat"><span class="num" data-count="11">0</span><span class="lbl">projets présentés</span></div>
+      <div class="stat"><span class="num" data-count="11">0</span><span class="lbl">projets réalisés</span></div>
       <div class="stat"><span class="num" data-count="4">0</span><span class="lbl">certifications &amp; distinctions</span></div>
       <div class="stat"><span class="num" data-count="2">0</span><span class="lbl">diplômes (maths &amp; info)</span></div>
     </div>
@@ -174,15 +174,17 @@
               </div>
               <span class="date">Sept. 2020 – Oct. 2022</span>
             </header>
-            <ul>
-              <li>Plateforme de <strong>détection de fraude en temps réel</strong> : ingestion, validation, feature engineering et inférence avec un SLA <strong>&lt; 200 ms</strong>.</li>
-              <li>Segmentation des assurés par K-Means et sélection des meilleurs modèles (SVM, XGBoost) sur l'AUC : <strong>+12 %</strong> de taux de détection.</li>
-              <li>Automatisation des jobs de validation et de chargement de données avec Airflow.</li>
-              <li>Docker, CI/CD et registre de modèles versionné pour la traçabilité et la reproductibilité.</li>
-              <li>Surveillance du drift, de la latence et des coûts d'inférence avec Prometheus/Grafana.</li>
-              <li>Projets de vision par ordinateur (détection d'objets, lecture de plaques) et d'analyse de données livrés sous forme d'API.</li>
+            <p class="tl-sub">Projets réalisés pendant cette mission :</p>
+            <ul class="tl-projects">
+              <li><strong>Détection de fraude à l'assurance en temps réel</strong> — Segmentation des assurés par K-Means puis meilleur modèle par cluster (SVM, XGBoost) : <strong>+12 %</strong> de taux de détection. Inférence conteneurisée en <strong>&lt; 200 ms</strong>, pipelines Airflow, CI/CD et monitoring Prometheus/Grafana.</li>
+              <li><strong>Lecture automatique de plaques d'immatriculation (ANPR)</strong> — Détection de la plaque puis reconnaissance des caractères en deux étapes avec SSD (TensorFlow Object Detection API). Exposée via une API REST Flask pour images et vidéos.</li>
+              <li><strong>Détection du port du casque</strong> — Fine-tuning de SSD MobileNet sur 3 classes (moto, avec casque, sans casque). Servi par une API Flask déployée sur une plateforme PaaS.</li>
+              <li><strong>Détection de véhicules</strong> — Détecteur SSD MobileNet pour l'analyse de trafic. Déployé comme service web de prédiction.</li>
+              <li><strong>HR Analytics</strong> — Analyse exploratoire de données RH extraites d'une base MySQL. Restitution des indicateurs clés dans un tableau de bord Tableau.</li>
+              <li><strong>Prévision de séries temporelles</strong> — Comparaison ARIMA/SARIMA et Prophet sur une série mensuelle saisonnière. Prévisions restituées dans Power BI.</li>
             </ul>
-            <div class="tags"><span>Détection de fraude</span><span>XGBoost</span><span>Airflow</span><span>Docker</span><span>Prometheus</span><span>Grafana</span></div>
+            <p class="tl-note"><i class='bx bx-lock-alt'></i> Démo ou code disponibles sur demande — <a href="mailto:alaaguendouz@gmail.com?subject=Demande%20de%20d%C3%A9mo%20%2F%20code%20%E2%80%94%20projets%20de%20conseil%202020-2022">me contacter</a></p>
+            <div class="tags"><span>Détection de fraude</span><span>XGBoost</span><span>Vision par ordinateur</span><span>TensorFlow</span><span>Flask</span><span>Airflow</span><span>Docker</span><span>Prometheus</span><span>Tableau</span><span>Power BI</span></div>
           </article>
         </li>
         <li class="tl-item">
@@ -211,13 +213,11 @@
     <div class="wrap">
       <p class="kicker">Réalisations</p>
       <h2>Projets</h2>
-      <p class="section-sub">Une sélection de projets en IA générative, MLOps, vision par ordinateur et data. Cliquez sur un projet pour le détail. Démo ou code disponibles sur demande.</p>
+      <p class="section-sub">Une sélection de projets en IA générative, MLOps et recherche (les projets de conseil 2020–2022 sont détaillés dans l'expérience). Cliquez sur un projet pour le détail. Démo ou code disponibles sur demande.</p>
       <div class="filters" role="tablist" aria-label="Filtrer les projets">
         <button class="filter active" data-filter="all">Tous</button>
         <button class="filter" data-filter="llm">IA générative</button>
         <button class="filter" data-filter="mlops">ML &amp; MLOps</button>
-        <button class="filter" data-filter="cv">Vision</button>
-        <button class="filter" data-filter="data">Data &amp; BI</button>
         <button class="filter" data-filter="research">Recherche</button>
       </div>
       <div class="projects" id="projectGrid"><!-- rendu par main.js --></div>

@@ -267,3 +267,11 @@ h3 { font-size: 1.05rem; line-height: 1.35; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Projets intégrés à une expérience */
+.tl-sub { font-size: .85rem; color: var(--accent-2); font-family: 'JetBrains Mono', monospace; margin-bottom: .6rem; }
+.tl-card ul.tl-projects { gap: .7rem; }
+.tl-card ul.tl-projects li { font-size: .9rem; }
+.tl-note { font-size: .82rem; color: var(--muted); display: flex; align-items: center; gap: .35rem; margin-bottom: 1rem; }
+.tl-note a { color: var(--accent); font-weight: 600; }
+.tl-note a:hover { text-decoration: underline; }
