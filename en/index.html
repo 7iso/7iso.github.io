@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostapha Guendouz | LLM & MLOps Engineer</title>
+  <meta name="description" content="Mostapha Guendouz — Production LLM Engineer, Generative AI and MLOps. RAG, LangGraph agents, fine-tuning, Docker/Kubernetes deployment. Paris, France.">
+  <meta property="og:title" content="Mostapha Guendouz | LLM & MLOps Engineer">
+  <meta property="og:description" content="Generative AI, RAG, agents and MLOps in production. Paris, France.">
+  <meta property="og:image" content="../assets/img/photo.jpg">
+  <link rel="alternate" hreflang="fr" href="https://7iso.github.io/">
+  <link rel="alternate" hreflang="en" href="https://7iso.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://7iso.github.io/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%236366f1'/><text x='50%' y='54%' font-family='Arial' font-weight='700' font-size='30' fill='white' text-anchor='middle' dominant-baseline='middle'>MG</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="brand">Mostapha<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn lang-btn" href="../" hreflang="fr" lang="fr" title="Version française" aria-label="Passer en français">FR</a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class='bx bx-sun'></i></button>
+      <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class='bx bx-menu'></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span> Open to full-time opportunities · Paris</p>
+        <h1>Hi, I'm<br><span class="grad">Mostapha Guendouz</span></h1>
+        <p class="role mono">&gt; <span id="typed">Production LLM Engineer</span><span class="caret">|</span></p>
+        <p class="lead">
+          Production-minded Data Scientist and AI Engineer. I design and ship generative AI
+          systems — advanced RAG pipelines, multi-agent systems, LLM fine-tuning —
+          and deploy them reliably with Docker, Kubernetes and CI/CD.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><i class='bx bx-grid-alt'></i> View my projects</a>
+          <a href="#contact" class="btn btn-ghost"><i class='bx bx-envelope'></i> Contact me</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/7iso" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/mostapha-alla-guendouz-4175531a8/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="mailto:alaaguendouz@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="../assets/img/photo.jpg" alt="Portrait of Mostapha Guendouz" width="600" height="794">
+        </div>
+        <div class="chip chip-a"><i class='bx bx-brain'></i> LLM &amp; RAG</div>
+        <div class="chip chip-b"><i class='bx bxl-docker'></i> MLOps</div>
+        <div class="chip chip-c"><i class='bx bx-bot'></i> Agents</div>
+      </div>
+    </div>
+
+    <div class="wrap stats">
+      <div class="stat"><span class="num" data-count="3" data-suffix="+">0</span><span class="lbl">years in ML / AI</span></div>
+      <div class="stat"><span class="num" data-count="11">0</span><span class="lbl">projects delivered</span></div>
+      <div class="stat"><span class="num" data-count="4">0</span><span class="lbl">certifications &amp; awards</span></div>
+      <div class="stat"><span class="num" data-count="2">0</span><span class="lbl">degrees (maths &amp; CS)</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <p class="kicker">About</p>
+      <h2>From mathematics to AI in production</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            With a <strong>Master's in Mathematics (ENS)</strong> and a <strong>Bachelor's in Computer Science (UPEC)</strong>,
+            I combine a strong theoretical foundation with several years of hands-on machine learning in real-world settings.
+          </p>
+          <p>
+            I specialise in LLM engineering and MLOps: from RAG pipelines (chunking, hybrid search, reranking)
+            to multi-agent systems with LangGraph, through fine-tuning (LoRA, QLoRA) and model security
+            evaluation. My goal: turn complex business problems into AI systems that are
+            <strong>robust, observable and scalable</strong>.
+          </p>
+        </div>
+        <div class="pillars">
+          <article class="card pillar">
+            <i class='bx bx-brain'></i>
+            <h3>Generative AI &amp; LLMs</h3>
+            <p>Advanced RAG, Graph RAG, LangGraph agents, MCP, fine-tuning and evaluation (hallucination, relevance, cost).</p>
+          </article>
+          <article class="card pillar">
+            <i class='bx bx-cloud-upload'></i>
+            <h3>MLOps / LLMOps</h3>
+            <p>Docker, Kubernetes, GitHub Actions CI/CD, Airflow, model registry, drift and latency monitoring.</p>
+          </article>
+          <article class="card pillar">
+            <i class='bx bx-shield-quarter'></i>
+            <h3>AI Security</h3>
+            <p>Prompt-injection prevention, guardrails, access control for sensitive data, GDPR compliance.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="section alt" id="experience">
+    <div class="wrap">
+      <p class="kicker">Career</p>
+      <h2>Professional experience</h2>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-dot"></div>
+          <article class="card tl-card">
+            <header>
+              <div>
+                <h3>Generative AI Engineer Intern</h3>
+                <p class="org">Startup — digital services company · Internship under agreement with UPEC · France</p>
+              </div>
+              <span class="date">Apr. 2026 – Jul. 2026</span>
+            </header>
+            <ul>
+              <li>Designed and deployed an LLM-based <strong>conversational Text-to-SQL agent</strong>, cutting data access time for business teams by <strong>40 %</strong>.</li>
+              <li><strong>Advanced RAG</strong> pipelines on Databricks and Airflow: chunking, embeddings, hybrid search and reranking, GDPR compliance and automated datamart generation.</li>
+              <li>Migrated a SAS analytics infrastructure to a Python/MySQL microservices architecture: <strong>+30 %</strong> processing speed and REST APIs for real-time reporting.</li>
+              <li>Customer propensity scoring model with <strong>XGBoost (AUC = 0.85)</strong>, with automated retraining through CI/CD.</li>
+              <li>Containerised the AI services (Docker), orchestrated with Kubernetes, with GitHub Actions workflows.</li>
+              <li>Power BI dashboards tracking LLM query performance, latency, inference cost and business KPIs.</li>
+            </ul>
+            <div class="tags"><span>LLM</span><span>Text-to-SQL</span><span>RAG</span><span>Databricks</span><span>Airflow</span><span>Kubernetes</span><span>XGBoost</span></div>
+          </article>
+        </li>
+        <li class="tl-item">
+          <div class="tl-dot"></div>
+          <article class="card tl-card">
+            <header>
+              <div>
+                <h3>Research Intern — Master's Thesis</h3>
+                <p class="org">École Normale Supérieure (ENS) · Research lab · Algeria</p>
+              </div>
+              <span class="date">Dec. 2022 – Jun. 2023</span>
+            </header>
+            <ul>
+              <li>Multimodal pipeline (OCR, computer vision, transformers) to classify text and non-text regions of <strong>medical prescriptions</strong>.</li>
+              <li>Image pre-processing (grayscale, erosion/dilation, Otsu binarisation) and synthetic augmentation (blur, Gaussian noise, flipping).</li>
+              <li>Hybrid <strong>CNN + Random Forest</strong> model: <strong>95 %</strong> overall accuracy and F1-score &gt; 0.90 per class, integrated into a real-time web interface.</li>
+              <li>Robustness testing against prompt injection and access control for sensitive data.</li>
+            </ul>
+            <div class="tags"><span>OCR</span><span>Vision</span><span>CNN</span><span>Transformers</span><span>AI Security</span></div>
+          </article>
+        </li>
+        <li class="tl-item">
+          <div class="tl-dot"></div>
+          <article class="card tl-card">
+            <header>
+              <div>
+                <h3>Machine Learning Engineer (Consultant)</h3>
+                <p class="org">Remote consultant · Bangalore, India</p>
+              </div>
+              <span class="date">Sep. 2020 – Oct. 2022</span>
+            </header>
+            <p class="tl-sub">Projects delivered during this engagement:</p>
+            <ul class="tl-projects">
+              <li><strong>Real-time insurance fraud detection</strong> — K-Means segmentation of policyholders, then the best model per cluster (SVM, XGBoost): <strong>+12 %</strong> detection rate. Containerised inference in <strong>&lt; 200 ms</strong>, Airflow pipelines, CI/CD and Prometheus/Grafana monitoring.</li>
+              <li><strong>Automatic number-plate recognition (ANPR)</strong> — Two-stage plate detection then character recognition with SSD (TensorFlow Object Detection API). Exposed through a Flask REST API for images and video.</li>
+              <li><strong>Helmet detection</strong> — Fine-tuned SSD MobileNet on 3 classes (motorcycle, with helmet, without helmet). Served by a Flask API deployed on a PaaS platform.</li>
+              <li><strong>Vehicle detection</strong> — SSD MobileNet detector for traffic analysis. Deployed as a prediction web service.</li>
+              <li><strong>HR Analytics</strong> — Exploratory analysis of HR data extracted from a MySQL database. Key indicators delivered in a Tableau dashboard.</li>
+              <li><strong>Time-series forecasting</strong> — ARIMA/SARIMA vs Prophet on a seasonal monthly series. Forecasts delivered in Power BI.</li>
+            </ul>
+            <p class="tl-note"><i class='bx bx-lock-alt'></i> Demo or code available on request — <a href="mailto:alaaguendouz@gmail.com?subject=Demo%20%2F%20code%20request%20%E2%80%94%20consulting%20projects%202020-2022">contact me</a></p>
+            <div class="tags"><span>Fraud detection</span><span>XGBoost</span><span>Computer vision</span><span>TensorFlow</span><span>Flask</span><span>Airflow</span><span>Docker</span><span>Prometheus</span><span>Tableau</span><span>Power BI</span></div>
+          </article>
+        </li>
+        <li class="tl-item">
+          <div class="tl-dot"></div>
+          <article class="card tl-card">
+            <header>
+              <div>
+                <h3>Research Project — Neural Architecture Search</h3>
+                <p class="org">School of AI Algiers / IndabaX Algeria</p>
+              </div>
+              <span class="date">2022</span>
+            </header>
+            <ul>
+              <li>Studied <strong>zero-shot</strong> methods for evaluating architectures in Neural Architecture Search.</li>
+              <li>Co-authored and presented a <strong>scientific poster</strong> at the IndabaX Algeria conference.</li>
+            </ul>
+            <div class="tags"><span>NAS</span><span>Deep Learning</span><span>Research</span></div>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <p class="kicker">Work</p>
+      <h2>Projects</h2>
+      <p class="section-sub">A selection of projects in generative AI, MLOps and research (the 2020–2022 consulting projects are listed under experience). Click a project for details. Demo or code available on request.</p>
+      <div class="filters" role="tablist" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="llm">Generative AI</button>
+        <button class="filter" data-filter="mlops">ML &amp; MLOps</button>
+        <button class="filter" data-filter="research">Research</button>
+      </div>
+      <div class="projects" id="projectGrid"><!-- rendered by main.js --></div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section alt" id="skills">
+    <div class="wrap">
+      <p class="kicker">Toolbox</p>
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <article class="card skill-group">
+          <h3><i class='bx bx-brain'></i> LLMs &amp; Generative AI</h3>
+          <div class="tags"><span>LangChain</span><span>LangGraph</span><span>Hugging Face Transformers</span><span>Prompt &amp; Context Engineering</span><span>RAG</span><span>Graph RAG &amp; Knowledge Graphs</span><span>Hybrid search &amp; reranking</span><span>Multi-agent systems</span><span>A2A protocols</span><span>MCP</span><span>Amazon Bedrock</span></div>
+        </article>
+        <article class="card skill-group">
+          <h3><i class='bx bx-slider-alt'></i> Fine-tuning &amp; evaluation</h3>
+          <div class="tags"><span>LoRA</span><span>QLoRA</span><span>DPO</span><span>RLHF</span><span>LLM evaluation (hallucination, relevance, latency, cost)</span><span>Prompt-injection prevention</span><span>Guardrails</span></div>
+        </article>
+        <article class="card skill-group">
+          <h3><i class='bx bx-line-chart'></i> Machine Learning &amp; Deep Learning</h3>
+          <div class="tags"><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>XGBoost</span><span>Computer vision</span><span>OCR</span><span>Time series (ARIMA, Prophet)</span><span>Clustering</span></div>
+        </article>
+        <article class="card skill-group">
+          <h3><i class='bx bx-rocket'></i> MLOps / LLMOps &amp; Cloud</h3>
+          <div class="tags"><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>CI/CD</span><span>AWS</span><span>Databricks</span><span>Airflow</span><span>Prometheus</span><span>Grafana</span><span>Observability</span><span>Flask / REST APIs</span></div>
+        </article>
+        <article class="card skill-group">
+          <h3><i class='bx bx-data'></i> Data &amp; BI</h3>
+          <div class="tags"><span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>SQLite</span><span>NoSQL</span><span>Vector databases</span><span>Power BI</span><span>Tableau</span><span>Streamlit</span><span>Git</span></div>
+        </article>
+        <article class="card skill-group">
+          <h3><i class='bx bx-world'></i> Languages</h3>
+          <div class="tags"><span>French — professional</span><span>English — professional</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <p class="kicker">Education</p>
+      <h2>Degrees &amp; certifications</h2>
+      <div class="edu-grid">
+        <div class="edu-col">
+          <article class="card edu">
+            <i class='bx bxs-graduation'></i>
+            <div>
+              <h3>Bachelor's in Computer Science</h3>
+              <p class="org">Université Paris-Est Créteil (UPEC) · France</p>
+              <span class="date">2023 – 2026</span>
+            </div>
+          </article>
+          <article class="card edu">
+            <i class='bx bxs-graduation'></i>
+            <div>
+              <h3>Master's in Mathematics</h3>
+              <p class="org">École Normale Supérieure (ENS) · Algeria</p>
+              <span class="date">2018 – 2023</span>
+            </div>
+          </article>
+        </div>
+        <div class="edu-col">
+          <article class="card cert">
+            <i class='bx bx-planet'></i>
+            <div><h3>NASA Space Apps Challenge — Global Nominee</h3><p class="org">Juno probe image processing · Oct. 2022</p></div>
+          </article>
+          <article class="card cert">
+            <i class='bx bx-award'></i>
+            <div><h3>Machine Learning</h3><p class="org">Stanford University (Coursera) · Sep. 2020</p></div>
+          </article>
+          <article class="card cert">
+            <i class='bx bx-award'></i>
+            <div><h3>Python for Data Science, AI &amp; Development</h3><p class="org">IBM (Coursera) · Sep. 2020</p></div>
+          </article>
+          <article class="card cert">
+            <i class='bx bx-award'></i>
+            <div><h3>Data Science Math Skills</h3><p class="org">Duke University (Coursera) · Sep. 2020</p></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section alt" id="contact">
+    <div class="wrap contact">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2>Let's work together</h2>
+        <p class="section-sub">I'm looking for a <strong>full-time position</strong> in generative AI engineering, LLMOps or data science, in Paris or remote. Want a demo or access to a project's code? Get in touch.</p>
+        <ul class="contact-list">
+          <li><i class='bx bx-envelope'></i><a href="mailto:alaaguendouz@gmail.com">alaaguendouz@gmail.com</a></li>
+          <li><i class='bx bxl-linkedin'></i><a href="https://www.linkedin.com/in/mostapha-alla-guendouz-4175531a8/" target="_blank" rel="noopener">Mostapha Alla Guendouz</a></li>
+          <li><i class='bx bxl-github'></i><a href="https://github.com/7iso" target="_blank" rel="noopener">github.com/7iso</a></li>
+          <li><i class='bx bx-map'></i><span>Paris, France</span></li>
+        </ul>
+      </div>
+      <form class="card contact-form" id="contactForm">
+        <label>Name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Subject<input type="text" name="subject" placeholder="Opportunity, demo request…"></label>
+        <label>Message<textarea name="message" rows="5" required placeholder="Your message"></textarea></label>
+        <button class="btn btn-primary" type="submit"><i class='bx bx-send'></i> Send</button>
+        <p class="form-note">The form opens your email app with the message pre-filled.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">© <span id="year"></span> Mostapha Guendouz · LLM &amp; MLOps Engineer · Paris</div>
+</footer>
+
+<!-- Project modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel card">
+    <button class="icon-btn modal-close" data-close aria-label="Close"><i class='bx bx-x'></i></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

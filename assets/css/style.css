@@ -275,3 +275,6 @@ h3 { font-size: 1.05rem; line-height: 1.35; }
 .tl-note { font-size: .82rem; color: var(--muted); display: flex; align-items: center; gap: .35rem; margin-bottom: 1rem; }
 .tl-note a { color: var(--accent); font-weight: 600; }
 .tl-note a:hover { text-decoration: underline; }
+
+/* Sélecteur de langue */
+.lang-btn { width: auto; padding: 0 .75rem; font-size: .8rem; font-weight: 700; letter-spacing: .05em; color: var(--text); }

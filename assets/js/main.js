@@ -1,17 +1,38 @@
 /* Portfolio — Mostapha Guendouz */
 
 const EMAIL = 'alaaguendouz@gmail.com';
+const LANG = document.documentElement.lang === 'en' ? 'en' : 'fr';
+
+/* Textes d'interface — le français est la langue principale. */
+const UI = {
+  fr: {
+    cats: { llm: 'IA générative', mlops: 'ML & MLOps', research: 'Recherche' },
+    details: 'Détails', detailsAria: 'Détails : ', onDemandShort: 'Démo / code sur demande',
+    keyPoints: 'Points clés', stack: 'Stack technique',
+    onDemand: 'Démo ou code disponibles sur demande', requestBtn: 'Demander une démo',
+    requestSubject: 'Demande de démo / code — ',
+    contactSubject: 'Contact depuis le portfolio — ',
+    typed: ['Production LLM Engineer', 'Ingénieur IA générative', 'MLOps / LLMOps', 'Data Scientist'],
+  },
+  en: {
+    cats: { llm: 'Generative AI', mlops: 'ML & MLOps', research: 'Research' },
+    details: 'Details', detailsAria: 'Details: ', onDemandShort: 'Demo / code on request',
+    keyPoints: 'Key points', stack: 'Tech stack',
+    onDemand: 'Demo or code available on request', requestBtn: 'Request a demo',
+    requestSubject: 'Demo / code request — ',
+    contactSubject: 'Contact from portfolio — ',
+    typed: ['Production LLM Engineer', 'Generative AI Engineer', 'MLOps / LLMOps', 'Data Scientist'],
+  },
+}[LANG];
 
 const CATEGORIES = {
-  llm: { label: 'IA générative', gradient: 'linear-gradient(135deg,#6366f1,#8b5cf6)' },
-  mlops: { label: 'ML & MLOps', gradient: 'linear-gradient(135deg,#0ea5e9,#6366f1)' },
-  cv: { label: 'Vision', gradient: 'linear-gradient(135deg,#f43f5e,#f59e0b)' },
-  data: { label: 'Data & BI', gradient: 'linear-gradient(135deg,#10b981,#0ea5e9)' },
-  research: { label: 'Recherche', gradient: 'linear-gradient(135deg,#a855f7,#ec4899)' },
+  llm: { label: UI.cats.llm, gradient: 'linear-gradient(135deg,#6366f1,#8b5cf6)' },
+  mlops: { label: UI.cats.mlops, gradient: 'linear-gradient(135deg,#0ea5e9,#6366f1)' },
+  research: { label: UI.cats.research, gradient: 'linear-gradient(135deg,#a855f7,#ec4899)' },
 };
 
 /* Chaque projet : la démo ou le code sont disponibles sur demande. */
-const PROJECTS = [
+const PROJECTS_FR = [
   {
     id: 'text2sql', cat: 'llm', icon: 'bx-message-square-dots', featured: true,
     title: 'Agent conversationnel Text-to-SQL',
@@ -93,11 +114,96 @@ const PROJECTS = [
   },
 ];
 
+/* English version — same projects, same order. */
+const PROJECTS_EN = [
+  {
+    id: 'text2sql', cat: 'llm', icon: 'bx-message-square-dots', featured: true,
+    title: 'Conversational Text-to-SQL Agent',
+    short: 'Query a database in plain language: an LLM writes the SQL, runs it read-only and summarises the results.',
+    context: 'Internship — Generative AI engineering',
+    desc: 'A chat application that lets business teams query a relational database without writing SQL. The schema is extracted automatically and given to the LLM, which writes a query in the right dialect; the query goes through a safety guard before it runs, and the results are shown as a table plus a plain-language summary.',
+    highlights: [
+      'Automatic schema introspection (SQLite and MySQL) injected into the prompt',
+      'Read-only guard: SELECT / WITH only, DDL/DML and multi-statement queries blocked',
+      'Natural-language summary of results for non-technical users',
+      'Rule-based fallback mode when the LLM API is unavailable',
+      'Authentication, conversation history, model connection test',
+    ],
+    metrics: [['−40 %', 'data access time']],
+    stack: ['LangChain', 'Groq / Llama', 'Streamlit', 'SQLAlchemy', 'SQLite', 'MySQL'],
+  },
+  {
+    id: 'rag', cat: 'llm', icon: 'bx-search-alt', featured: true,
+    title: 'Enterprise-Grade RAG Application',
+    short: 'Agentic RAG assistant with robust ingestion, hybrid search, reranking, guardrails and full observability.',
+    context: 'Freelance project',
+    desc: 'Design of a production-ready RAG application: from ingesting clean or noisy documents to generating traced, secured answers.',
+    highlights: [
+      'Ingestion pipeline for clean and noisy data, chunking strategies (size, overlap)',
+      'Embeddings and vector store, hybrid search and passage reranking',
+      'Fallback mechanisms when retrieval finds no relevant context',
+      'Guardrails: jailbreak protection, sensitive-topic filtering (topic guard)',
+      'Observability: traces, spans and waterfall analysis (Logfire), LLM gateway and caching',
+    ],
+    metrics: [],
+    stack: ['Python', 'LangChain', 'Vector store', 'Reranker', 'Logfire', 'Docker'],
+  },
+  {
+    id: 'aqi', cat: 'mlops', icon: 'bx-wind', featured: true,
+    title: 'Paris Air-Quality Monitoring',
+    short: 'End-to-end pipeline on real data from the Paris-Montsouris station: collection, SQLite database, desktop app and PM2.5 prediction (10 models).',
+    context: 'University project — end-to-end pipeline on real-world data (Paris-Montsouris station)',
+    desc: 'End-to-end pipeline built on real data from the Paris-Montsouris station: automated collection of daily weather, join with PM2.5 measurements (US EPA AQI index), SQLite storage, a desktop app to browse, filter and correlate the data, then training and comparison of prediction models.',
+    highlights: [
+      'Real 2020–2025 data: daily weather from the Paris-Montsouris station and Paris PM2.5 measurements',
+      'Scraping pipeline with caching, parsing and a date-based join (fixes a 174-row misalignment in the first version)',
+      'SQLite database with parameterised queries and a history of correlation runs',
+      'Tkinter app: browse/edit data, filters (moving average, z-score), correlations, prediction',
+      'Leak-free feature engineering: calendar lags, sin/cos seasonality, previous-day PM history',
+      'Chronological split + TimeSeriesSplit validation; benchmarked against climatology and persistence baselines',
+    ],
+    metrics: [['10', 'models compared'], ['2020–2025', 'daily data']],
+    stack: ['Python', 'pandas', 'scikit-learn', 'SQLite', 'Tkinter', 'Matplotlib', 'BeautifulSoup'],
+  },
+  {
+    id: 'ocr', cat: 'research', icon: 'bx-file-find',
+    title: 'Medical Prescription Analysis (thesis)',
+    short: 'Classifying text and non-text regions of prescriptions: CNN + Random Forest, 95 % accuracy.',
+    context: "Master's thesis — ENS",
+    desc: 'Multimodal pipeline combining OCR, computer vision and transformers to automatically segment and classify regions of medical prescriptions.',
+    highlights: [
+      "Pre-processing: grayscale, erosion/dilation, Otsu binarisation",
+      'Synthetic augmentation (blur, Gaussian noise, flipping) for better generalisation',
+      'Hybrid CNN + Random Forest model',
+      'Web interface showing detected regions in real time',
+      'Robustness testing against prompt injection and access control for sensitive data',
+    ],
+    metrics: [['95 %', 'overall accuracy'], ['> 0.90', 'F1-score per class']],
+    stack: ['Python', 'OpenCV', 'OCR', 'CNN', 'Random Forest', 'Transformers'],
+  },
+  {
+    id: 'nas', cat: 'research', icon: 'bx-network-chart',
+    title: 'Zero-Shot Evaluation for Neural Architecture Search',
+    short: 'Research on zero-shot proxies that score architectures without training — poster presented at IndabaX.',
+    context: 'Research project — 2022',
+    desc: 'Study of zero-shot methods that estimate the quality of a neural network architecture without training it, to drastically speed up architecture search.',
+    highlights: [
+      'Review and experiments with zero-shot proxies for NAS',
+      'Co-authored a scientific poster',
+      'Presented at the IndabaX Algeria conference to a multidisciplinary audience',
+    ],
+    metrics: [],
+    stack: ['PyTorch', 'Deep Learning', 'NAS'],
+  },
+];
+
+const PROJECTS = LANG === 'en' ? PROJECTS_EN : PROJECTS_FR;
+
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const requestLink = (p) =>
-  `mailto:${EMAIL}?subject=${encodeURIComponent(`Demande de démo / code — ${p.title}`)}`;
+  `mailto:${EMAIL}?subject=${encodeURIComponent(`${UI.requestSubject}${p.title}`)}`;
 
 /* ── Projets ── */
 function renderProjects() {
@@ -105,7 +211,7 @@ function renderProjects() {
   grid.innerHTML = PROJECTS.map((p) => {
     const c = CATEGORIES[p.cat];
     return `
-      <button class="card proj reveal" data-cat="${p.cat}" data-id="${p.id}" aria-label="Détails : ${esc(p.title)}">
+      <button class="card proj reveal" data-cat="${p.cat}" data-id="${p.id}" aria-label="${UI.detailsAria}${esc(p.title)}">
         <div class="proj-cover" style="background:${c.gradient}">
           <span class="badge">${p.featured ? '⭐ ' : ''}${esc(c.label)}</span>
           <i class='bx ${p.icon}'></i>
@@ -115,8 +221,8 @@ function renderProjects() {
           <p>${esc(p.short)}</p>
           <div class="tags">${p.stack.slice(0, 4).map((t) => `<span>${esc(t)}</span>`).join('')}</div>
           <div class="proj-foot">
-            <span class="on-demand"><i class='bx bx-lock-alt'></i> Démo / code sur demande</span>
-            <span class="more">Détails <i class='bx bx-right-arrow-alt'></i></span>
+            <span class="on-demand"><i class='bx bx-lock-alt'></i> ${UI.onDemandShort}</span>
+            <span class="more">${UI.details} <i class='bx bx-right-arrow-alt'></i></span>
           </div>
         </div>
       </button>`;
@@ -151,16 +257,16 @@ function openModal(id) {
       <p>${esc(p.desc)}</p>
       ${p.metrics.length ? `<div class="metrics">${p.metrics.map(([v, l]) => `<div class="metric">${esc(v)}<small>${esc(l)}</small></div>`).join('')}</div>` : ''}
       <div>
-        <h4>Points clés</h4>
+        <h4>${UI.keyPoints}</h4>
         <ul>${p.highlights.map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
       </div>
       <div>
-        <h4>Stack technique</h4>
+        <h4>${UI.stack}</h4>
         <div class="tags">${p.stack.map((t) => `<span>${esc(t)}</span>`).join('')}</div>
       </div>
       <div class="request">
-        <span><i class='bx bx-lock-alt'></i> Démo ou code disponibles sur demande</span>
-        <a class="btn btn-primary" href="${requestLink(p)}"><i class='bx bx-envelope'></i> Demander une démo</a>
+        <span><i class='bx bx-lock-alt'></i> ${UI.onDemand}</span>
+        <a class="btn btn-primary" href="${requestLink(p)}"><i class='bx bx-envelope'></i> ${UI.requestBtn}</a>
       </div>
     </div>`;
   lastFocus = document.activeElement;
@@ -223,7 +329,7 @@ function setupNav() {
 /* ── Texte animé ── */
 function setupTyped() {
   const el = $('#typed');
-  const words = ['Production LLM Engineer', 'Ingénieur IA générative', 'MLOps / LLMOps', 'Data Scientist'];
+  const words = UI.typed;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   let w = 0, i = words[0].length, del = true;
   const tick = () => {
@@ -272,7 +378,7 @@ function setupContact() {
   $('#contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
-    const subject = f.get('subject') || `Contact depuis le portfolio — ${f.get('name')}`;
+    const subject = f.get('subject') || `${UI.contactSubject}${f.get('name')}`;
     const body = `${f.get('message')}\n\n— ${f.get('name')}`;
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
