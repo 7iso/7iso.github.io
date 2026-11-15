@@ -32,7 +32,7 @@ const PROJECTS = [
     id: 'rag', cat: 'llm', icon: 'bx-search-alt', featured: true,
     title: "Application RAG de niveau entreprise",
     short: 'Assistant RAG agentique avec ingestion robuste, recherche hybride, reranking, garde-fous et observabilité complète.',
-    context: 'Projet personnel',
+    context: 'Projet freelance',
     desc: "Conception d'une application RAG pensée pour la production : de l'ingestion de documents propres ou bruités jusqu'à la génération de réponses tracées et sécurisées.",
     highlights: [
       "Pipeline d'ingestion pour données propres et bruitées, stratégies de chunking (taille, chevauchement)",
@@ -47,10 +47,11 @@ const PROJECTS = [
   {
     id: 'aqi', cat: 'mlops', icon: 'bx-wind', featured: true,
     title: "Surveillance de la qualité de l'air à Paris",
-    short: 'Collecte météo + PM2.5, base SQLite, application de bureau et prédiction de la pollution avec 10 modèles comparés.',
-    context: 'Projet universitaire',
-    desc: "Outil d'analyse de la qualité de l'air à Paris (station Montsouris) : scraping de la météo quotidienne, jointure avec les données PM2.5 (indice AQI EPA), stockage SQLite et interface graphique pour consulter, filtrer, corréler et prédire.",
+    short: 'Pipeline end-to-end sur données réelles de la station Paris-Montsouris : collecte, base SQLite, application et prédiction PM2.5 (10 modèles).',
+    context: 'Projet universitaire — pipeline end-to-end sur données réelles (station Paris-Montsouris)',
+    desc: "Pipeline de bout en bout construit sur des données réelles de la station Paris-Montsouris : collecte automatisée de la météo quotidienne, jointure avec les mesures PM2.5 (indice AQI EPA), stockage SQLite, application graphique pour consulter, filtrer et corréler les données, puis entraînement et comparaison de modèles de prédiction.",
     highlights: [
+      'Données réelles 2020–2025 : météo quotidienne de la station Paris-Montsouris et mesures PM2.5 de Paris',
       'Pipeline de scraping avec cache, parsing et jointure par date (corrige un décalage de 174 lignes de la version initiale)',
       'Base SQLite avec requêtes paramétrées et historique des analyses de corrélation',
       'Interface Tkinter : consultation/édition des données, filtres (moyenne mobile, z-score), corrélations, prédiction',
@@ -64,7 +65,7 @@ const PROJECTS = [
     id: 'fraud', cat: 'mlops', icon: 'bx-shield-x',
     title: "Détection de fraude à l'assurance en temps réel",
     short: 'Plateforme de bout en bout : ingestion, validation, segmentation des assurés et inférence en moins de 200 ms.',
-    context: 'Mission de conseil',
+    context: 'Consultant ML — à distance (Bangalore, Inde)',
     desc: "Plateforme de détection de fraude sur des déclarations de sinistres, de la validation des données brutes jusqu'à l'inférence temps réel et au monitoring en production.",
     highlights: [
       'Validation et chargement automatisés des lots de données (Airflow) avant entraînement et prédiction',
@@ -80,7 +81,7 @@ const PROJECTS = [
     id: 'anpr', cat: 'cv', icon: 'bx-car',
     title: "Lecture automatique de plaques d'immatriculation",
     short: 'Détection de la plaque puis reconnaissance des caractères en deux étapes, exposée via une API REST.',
-    context: 'Mission de conseil',
+    context: 'Consultant ML — à distance (Bangalore, Inde)',
     desc: "Système ANPR (Automatic Number Plate Recognition) qui localise la plaque dans une image ou une vidéo, la recadre, puis reconnaît chaque caractère avec un détecteur dédié.",
     highlights: [
       'Pipeline en deux étapes avec SSD (TensorFlow Object Detection API) : plaque, puis caractères',
@@ -95,7 +96,7 @@ const PROJECTS = [
     id: 'helmet', cat: 'cv', icon: 'bx-hard-hat',
     title: 'Détection du port du casque',
     short: 'Détecteur d\'objets identifiant les motards avec et sans casque, servi par une API de prédiction.',
-    context: 'Mission de conseil',
+    context: 'Consultant ML — à distance (Bangalore, Inde)',
     desc: "Modèle de détection d'objets entraîné pour la sécurité routière : il repère les motos et distingue les conducteurs portant un casque de ceux qui n'en portent pas.",
     highlights: [
       'Fine-tuning de SSD MobileNet (pré-entraîné sur COCO) sur 3 classes : moto, avec casque, sans casque',
@@ -110,7 +111,7 @@ const PROJECTS = [
     id: 'vehicle', cat: 'cv', icon: 'bx-bus',
     title: 'Détection de véhicules',
     short: 'Détection multi-classes de véhicules dans des images, exposée sous forme de service web.',
-    context: 'Mission de conseil',
+    context: 'Consultant ML — à distance (Bangalore, Inde)',
     desc: "Service de détection de véhicules basé sur un modèle SSD MobileNet, conçu pour être intégré dans des applications d'analyse de trafic.",
     highlights: [
       'Détecteur SSD MobileNet adapté au cas d\'usage',
@@ -124,7 +125,7 @@ const PROJECTS = [
     id: 'hr', cat: 'data', icon: 'bx-group',
     title: 'HR Analytics — tableau de bord RH',
     short: 'Analyse exploratoire de données RH et tableau de bord interactif pour le suivi des indicateurs emploi.',
-    context: 'Mission de conseil',
+    context: 'Consultant ML — à distance (Bangalore, Inde)',
     desc: "Projet d'analytique RH : extraction depuis une base MySQL, analyse exploratoire en Python et restitution des indicateurs clés dans un tableau de bord Tableau à plusieurs pages.",
     highlights: [
       'Import et nettoyage d\'un dump MySQL',
@@ -139,7 +140,7 @@ const PROJECTS = [
     id: 'ts', cat: 'data', icon: 'bx-trending-up',
     title: 'Prévision de séries temporelles',
     short: 'Comparaison ARIMA vs Prophet sur une série mensuelle saisonnière et restitution dans Power BI.',
-    context: 'Mission de conseil',
+    context: 'Consultant ML — à distance (Bangalore, Inde)',
     desc: "Étude de prévision sur une série temporelle mensuelle fortement saisonnière (trafic aérien) : analyse de la stationnarité, modélisation et comparaison des approches.",
     highlights: [
       'Décomposition tendance / saisonnalité, tests de stationnarité, différenciation',
